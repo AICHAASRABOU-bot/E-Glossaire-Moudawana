@@ -1,0 +1,12 @@
+{
+  "name": "moudawana-glossaire",
+  "version": "1.0.0",
+  "description": "قاموس مدونة الأسرة التفاعلي",
+  "main": "moudawana_e_glossaire.html",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
