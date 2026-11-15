@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
-  <meta name="color-scheme" content="light only">
   <meta charset="UTF-8" />
+  <meta name="color-scheme" content="light only" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Moudawana | E-Glossaire — قاموس الثقافة الأسرية</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <style>
     :root {
+      color-scheme: light only;
       --rcar-green: #668d38;
       --rcar-green-dark: #4e6e29;
       --rcar-green-soft: #eef5e6;
@@ -643,6 +644,68 @@
       .edec-cards { grid-template-columns: 1fr; }
       .modal-grid-top { grid-template-columns: 1fr; }
     }
+    /* تنسيق الجوال والشاشات الصغيرة */
+    @media (max-width: 768px) {
+      .slider-nav {
+        position: relative;
+      }
+      .slider-nav .breadcrumb-bar {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: 6px 8px;
+        padding: 10px 8px;
+        align-items: center;
+      }
+      .slider-nav .breadcrumb-bar > .current-link {
+        width: auto;
+        justify-content: center;
+      }
+      .slider-nav .breadcrumb-bar > .welcome-area {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        font-size: 0.70rem;
+        line-height: 1.4;
+        gap: 3px;
+      }
+      .welcome-msg.hotline {
+        padding: 3px 7px;
+        font-size: 0.68rem;
+      }
+      .logo-horizontal img {
+        max-height: 34px;
+        max-width: 90px;
+        height: auto;
+        width: auto;
+        object-fit: contain;
+        border-radius: 6px;
+        background-color: #ffffff;
+        padding: 2px;
+      }
+      .logo-horizontal img.master-logo {
+        max-height: 46px;
+        max-width: 56px;
+        height: auto;
+        width: auto;
+        object-fit: contain;
+        border-radius: 6px;
+        background-color: #ffffff;
+        padding: 2px;
+      }
+      .cover-stage {
+        width: 96%;
+        margin: 12px auto;
+        padding: 8px;
+      }
+      .cover-card-btn {
+        width: 95%;
+        margin: 8px auto;
+        padding: 10px;
+      }
+      #translatorView div[style*="grid-template-columns:1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+      }
+    }
   </style>
 </head>
 <body class="fixed-header">
@@ -1245,6 +1308,5 @@
     setInterval(updateFooterDateTime, 1000);
 
   </script>
-  <script src="script.js"></script>
 </body>
 </html>
